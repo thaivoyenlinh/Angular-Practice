@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap');
+
+
+$color: blueviolet;
+
+#form{
+    padding: 30px 40px;
+    width:fit-content;
+    border: 1px solid $color;
+    font-family: nunito;
+    margin: 5rem auto;
+
+    h1 {
+        text-align: center;
+        color: $color;
+        font-weight: bolder;
+    }
+
+    input:-moz-ui-invalid { 
+        box-shadow:0 0 1.5px 1px red;
+    }
+
+    .form-group {
+        label {
+            font-weight: bold;
+            font-size: 17px;
+        }
+    }
+
+    .row {
+        // border: 1px solid red;
+        width: 70%;
+        margin-left: 17px;
+    }
+}
+
+.form-control {
+    width: 450px;
+}
+
+#buttons{
+    // border: 1px solid red;
+    text-align: center;
+    button {
+        background-color: rgb(198, 156, 238);
+        margin: 0 15px;
+    }
+}
