@@ -1,0 +1,85 @@
+<div class="container">
+    <div id="form">
+        <form [formGroup]="RegistrationForm" (ngSubmit)="onSubmit()" novalidate>
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" class="form-control" formControlName="username">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" class="form-control" formControlName="password">
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" class="form-control" formControlName="password_confirm">
+            </div>
+
+            <div class="form-group">
+                <label>Image</label>
+                <input formControlName="image" class="form-control"  type="file">
+            </div> 
+
+            <div class="form-group">
+                <label>Job</label>
+                <select formControlName="job" class="form-control">
+                    <option *ngFor="let job of jobs">{{job}}</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="row">
+                    <!-- <div *ngFor="let gen of genders" class="col">
+                        <input  formControlName="gender"  class="form-check-input" type="radio">
+                        <label class="form-check-label">{{gen}}</label>
+                    </div> -->
+
+                    <div>
+                        <input id="male" type="radio" class="custom-control-input" value="male" name="gender" formControlName="gender">
+                        <label class="custom-control-label" for="male">Male</label>
+                     </div>
+                  
+                     <div>
+                        <input id="female" type="radio" class="custom-control-input" value="female" name="gender" formControlName="gender">
+                        <label class="custom-control-label" for="female">Female</label>
+                     </div>
+
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Favorite</label>
+                <div class="row">
+                    <div *ngFor="let favorite of favorites; let i=index" class="col">
+                        <label>
+                            <input type="checkbox"  
+                                (change)="onCheckboxChange($event)" [value]="favorite.value"/>
+                                {{favorite.name}}
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+
+            <div id="buttons">
+                <button type="submit" class="btn">Submit</button>
+                <button type="reset" class="btn">Reset</button>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<!-- <div class="form-group">
+    <label>Temp</label>
+    <input class="form-control"  type="text" [formControl]="temp">
+
+    <button class="btn" (click)="abc()">Click</button>
+</div> -->
+
+
+
+
+
