@@ -7,11 +7,16 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './form/form.component';
 import { HomeComponent } from './home/home.component';
 
+import { ProductComponent } from './product/product.component';
+// import { AddComponent } from './product/add/add.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     FormComponent,
-    HomeComponent
+    HomeComponent,
+    ProductComponent,
+    // AddComponent
   ],
   imports: [
     BrowserModule,
